@@ -1,0 +1,5 @@
+Date,Product,Category,Price,Quantity,Revenue,Age,spending
+2026-06-01,Laptop,Electronics,1000,5,5000,25,500
+2026-06-02,Phone,Electronics,500,10,5000,,300
+2026-06-03,T-Shirt,Clothing,20,50,1000,30,
+2026-06-04,Book,Books,15,30,450,35,100
