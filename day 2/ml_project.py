@@ -75,8 +75,22 @@ def main():
     print("TRAINING LINEAR REGRESSION MODEL")
     model = LinearRegression()
     model.fit(X_train, Y_train)
+    predictions = model.predict(X_test)
     score = model.score(X_test, Y_test)
-    print(f"Model R\u00b2 score on test set: {score:.4f}\n")
+    print(f"Model R² score on test set: {score:.4f}\n")
+
+    # ── 7. PREDICTION vs ACTUAL COMPARISON ───────────────────────────────────
+    print("SAMPLE PREDICTIONS vs ACTUAL:")
+    actual_spending = Y_test.head(3).values
+    predicted_spending = predictions[:3]
+
+    for i in range(3):
+        predicted = round(predicted_spending[i])
+        actual = actual_spending[i]
+        difference = abs(actual - predicted)
+        print(f"  Model Guessed : {predicted}")
+        print(f"  Real Answer   : {actual}")
+        print(f"  Difference    : {difference}\n")
 
 if __name__ == "__main__":
     main()
